@@ -3,51 +3,67 @@ package com.coc.ak.database;
 public class COCData {
 
 	private long id;
-	private String acronym;
-	private String value;
+	private String clanName;
+	private String actualName;
+	private String email;
+    private String status;
 
 	public COCData() {
 
 	}
 
-	public COCData(long i, String acronym, String value) {
+	public COCData(long i, String clanName, String actualName, String email, String status) {
 		this.id = i;
-		this.acronym = acronym;
-		this.value = value;
+        this.clanName = clanName;
+        this.actualName = actualName;
+        this.email = email;
+        this.status = status;
 	}
 
-	public COCData(String acronym, String value) {
-		this.acronym = acronym;
-		this.value = value;
+	public COCData(String clanName, String actualName, String email, String status) {
+		this.clanName = clanName;
+		this.actualName = actualName;
+        this.email = email;
+        this.status = status;
 	}
 
-	public long getId() {
-		return id;
-	}
+    public String getClanName() {
+        return clanName;
+    }
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    public void setClanName(String clanName) {
+        this.clanName = clanName;
+    }
 
-	public String getValue() {
-		return value;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public void setValue(String d) {
-		this.value = d;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public String getAcronym() {
-		return acronym;
-	}
+    public String getActualName() {
+        return actualName;
+    }
 
-	public void setAcronym(String value) {
-		this.acronym = value;
-	}
+    public void setActualName(String actualName) {
+        this.actualName = actualName;
+    }
 
-	// Will be used by the ArrayAdapter in the ListView
-	// @Override
-	// public String toString() {
-	// return data;
-	// }
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
