@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+    <!--<group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_menu_camera"
@@ -18,6 +18,10 @@
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
             android:title="Tools" />
+        <item
+            android:id="@+id/nav_add"
+            android:icon="@drawable/ic_menu_plus"
+            android:title="Plus" />
     </group>
 
     <item android:title="Communicate">
@@ -30,6 +34,38 @@
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Send" />
+        </menu>
+    </item>-->
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_clan"
+            android:icon="@drawable/ic_clan"
+            android:title="@string/menu_clan" />
+        <item
+            android:id="@+id/nav_outlaws"
+            android:icon="@drawable/ic_outlaws"
+            android:title="@string/menu_outlaws" />
+        <item
+            android:id="@+id/nav_startwar"
+            android:icon="@drawable/ic_startwar"
+            android:title="@string/menu_startwar" />
+        <item
+            android:id="@+id/nav_reportAttack"
+            android:icon="@drawable/ic_reportAttack"
+            android:title="@string/menu_logattacks" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_pushnow"
+                android:icon="@drawable/ic_pushnow"
+                android:title="@string/menu_pushnow" />
+            <item
+                android:id="@+id/nav_pushsettings"
+                android:icon="@drawable/ic_pushsettings"
+                android:title="@string/menu_notifsettings" />
         </menu>
     </item>
 
