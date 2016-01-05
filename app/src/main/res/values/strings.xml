@@ -9,6 +9,7 @@
     <string name="menu_clan">Clan</string>
     <string name="menu_outlaws">Outlaws</string>
     <string name="menu_startwar">Start War</string>
+    <string name="menu_plan">Plan</string>
     <string name="menu_logattacks">Log Attacks</string>
     <string name="menu_pushnow">Push Now</string>
     <string name="menu_notifsettings">Notification Settings</string>
@@ -24,6 +25,10 @@
     <!--startwar related-->
     <string name="startwar_hello_blank_fragment">Hello blank startwar</string>
     <string name="startwar_hello_blank_fragment2">Hello blank startwar2</string>
+
+    <!--plan related-->
+    <string name="plan_hello_blank_fragment">Hello blank plan</string>
+    <string name="plan_hello_blank_fragment2">Hello blank plan2</string>
 
     <!--logattacks related-->
     <string name="logattacks_hello_blank_fragment">Hello blank logattacks</string>

@@ -1,0 +1,28 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coc.ak.fragments.ClanFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragmentMainText"
+        android:text="@string/plan_hello_blank_fragment"
+        android:layout_gravity="left" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/fragmentMainText2"
+        android:text="@string/plan_hello_blank_fragment2"
+        android:layout_gravity="right" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="442dp"
+        android:id="@+id/listView"
+        android:layout_gravity="center_horizontal|bottom" />
+
+</FrameLayout>

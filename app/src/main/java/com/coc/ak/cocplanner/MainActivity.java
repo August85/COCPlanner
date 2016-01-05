@@ -20,11 +20,20 @@ import com.coc.ak.fragments.ClanFragment;
 import com.coc.ak.fragments.LogAttacksFragment;
 import com.coc.ak.fragments.NotifSettingsFragment;
 import com.coc.ak.fragments.OutlawsFragment;
+import com.coc.ak.fragments.PlanFragment;
 import com.coc.ak.fragments.PushNowFragment;
 import com.coc.ak.fragments.StartWarFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    ClanFragment clanFragment;
+    OutlawsFragment outlawsFragment;
+    StartWarFragment startWarFragment;
+    LogAttacksFragment logAttacksFragment;
+    PushNowFragment pushNowFragment;
+    NotifSettingsFragment notifSettingsFragment;
+    PlanFragment planFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +59,18 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        initialize();
     }
 
+    private void initialize() {
+        this.clanFragment = new ClanFragment();
+        this.outlawsFragment = new OutlawsFragment();
+        this.startWarFragment = new StartWarFragment();
+        this.logAttacksFragment = new LogAttacksFragment();
+        this.pushNowFragment = new PushNowFragment();
+        this.notifSettingsFragment = new NotifSettingsFragment();
+        this.planFragment = new PlanFragment();
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -87,48 +106,45 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        TextView tv;
-        ClanFragment clanFragment;
-        OutlawsFragment outlawsFragment;
-        StartWarFragment startWarFragment;
-        LogAttacksFragment logAttacksFragment;
-        PushNowFragment pushNowFragment;
-        NotifSettingsFragment notifSettingsFragment;
 
         int id = item.getItemId();
-
-
         if (id == R.id.nav_clan) {
-            clanFragment = new ClanFragment();
+            //clanFragment = new ClanFragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.mainFrame, clanFragment);
+            ft.replace(R.id.mainFrame, this.clanFragment);
             ft.commit();
         } else if (id == R.id.nav_outlaws) {
-            outlawsFragment = new OutlawsFragment();
+            //outlawsFragment = new OutlawsFragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.mainFrame, outlawsFragment);
+            ft.replace(R.id.mainFrame, this.outlawsFragment);
             ft.commit();
 
         } else if (id == R.id.nav_startwar) {
-            startWarFragment = new StartWarFragment();
+            //startWarFragment = new StartWarFragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.mainFrame, startWarFragment);
+            ft.replace(R.id.mainFrame, this.startWarFragment);
+            ft.commit();
+
+        } else if (id == R.id.nav_plan) {
+            //planFragment = new PlanFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.mainFrame, this.planFragment);
             ft.commit();
 
         } else if (id == R.id.nav_reportAttack) {
-            logAttacksFragment = new LogAttacksFragment();
+            //logAttacksFragment = new LogAttacksFragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.mainFrame, logAttacksFragment);
+            ft.replace(R.id.mainFrame, this.logAttacksFragment);
             ft.commit();
         } else if (id == R.id.nav_pushnow) {
-            pushNowFragment = new PushNowFragment();
+            //pushNowFragment = new PushNowFragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.mainFrame, pushNowFragment);
+            ft.replace(R.id.mainFrame, this.pushNowFragment);
             ft.commit();
         } else if (id == R.id.nav_pushsettings) {
-            notifSettingsFragment = new NotifSettingsFragment();
+            //notifSettingsFragment = new NotifSettingsFragment();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.mainFrame, notifSettingsFragment);
+            ft.replace(R.id.mainFrame, this.notifSettingsFragment);
             ft.commit();
         }
 

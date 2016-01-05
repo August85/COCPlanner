@@ -51,6 +51,11 @@
             android:icon="@drawable/ic_startwar"
             android:title="@string/menu_startwar" />
         <item
+            android:id="@+id/nav_plan"
+            android:icon="@drawable/ic_plan"
+            android:title="@string/menu_plan" />
+
+        <item
             android:id="@+id/nav_reportAttack"
             android:icon="@drawable/ic_reportAttack"
             android:title="@string/menu_logattacks" />
