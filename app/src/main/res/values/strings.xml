@@ -17,9 +17,25 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_blank_fragment2">Hello blank fragment2</string>
 
-    <!--clan_outlaws related-->
+    <!--outlaws_fragment related-->
     <string name="outlaws_hello_blank_fragment">Hello blank outlaws</string>
     <string name="outlaws_hello_blank_fragment2">Hello blank outlaws2</string>
+
+    <!--startwar related-->
+    <string name="startwar_hello_blank_fragment">Hello blank startwar</string>
+    <string name="startwar_hello_blank_fragment2">Hello blank startwar2</string>
+
+    <!--logattacks related-->
+    <string name="logattacks_hello_blank_fragment">Hello blank logattacks</string>
+    <string name="logattacks_hello_blank_fragment2">Hello blank logattacks2</string>
+
+    <!--push now related-->
+    <string name="pushnow_hello_blank_fragment">Hello blank pushnow</string>
+    <string name="pushnow_hello_blank_fragment2">Hello blank pushnow2</string>
+
+    <!--notif settings related-->
+    <string name="notifsettings_hello_blank_fragment">Hello blank notifsettings</string>
+    <string name="notifsettings_hello_blank_fragment2">Hello blank notifsettings2</string>
 
 
 </resources>

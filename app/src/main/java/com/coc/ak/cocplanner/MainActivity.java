@@ -17,7 +17,11 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.coc.ak.fragments.ClanFragment;
+import com.coc.ak.fragments.LogAttacksFragment;
+import com.coc.ak.fragments.NotifSettingsFragment;
 import com.coc.ak.fragments.OutlawsFragment;
+import com.coc.ak.fragments.PushNowFragment;
+import com.coc.ak.fragments.StartWarFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -86,6 +90,11 @@ public class MainActivity extends AppCompatActivity
         TextView tv;
         ClanFragment clanFragment;
         OutlawsFragment outlawsFragment;
+        StartWarFragment startWarFragment;
+        LogAttacksFragment logAttacksFragment;
+        PushNowFragment pushNowFragment;
+        NotifSettingsFragment notifSettingsFragment;
+
         int id = item.getItemId();
 
 
@@ -101,17 +110,26 @@ public class MainActivity extends AppCompatActivity
             ft.commit();
 
         } else if (id == R.id.nav_startwar) {
-            //tv.setText(getResources().getText(id));
+            startWarFragment = new StartWarFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.mainFrame, startWarFragment);
+            ft.commit();
 
         } else if (id == R.id.nav_reportAttack) {
-            //tv.setText(getResources().getText(id));
-
+            logAttacksFragment = new LogAttacksFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.mainFrame, logAttacksFragment);
+            ft.commit();
         } else if (id == R.id.nav_pushnow) {
-            //tv.setText(getResources().getText(id));
-
+            pushNowFragment = new PushNowFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.mainFrame, pushNowFragment);
+            ft.commit();
         } else if (id == R.id.nav_pushsettings) {
-            //tv.setText(getResources().getText(id));
-
+            notifSettingsFragment = new NotifSettingsFragment();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.mainFrame, notifSettingsFragment);
+            ft.commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
